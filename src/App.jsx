@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, BookOpen, Monitor, Globe, BrainCircuit } from "lucide-react";
+
 
 export default function CurriculoComputacao() {
   const [selectedSerie, setSelectedSerie] = useState(null);
@@ -9,52 +9,101 @@ export default function CurriculoComputacao() {
     () => [
       {
         ano: "1º Ano",
-        foco: "Contato inicial com o mundo digital",
+        foco: "Informação, segurança e primeiros algoritmos",
         resumo:
-          "Reconhecimento dos dispositivos, cuidados básicos, uso do computador no cotidiano e introdução ao pensamento computacional de forma lúdica.",
+          "Compreensão inicial da informação, codificação, uso seguro de artefatos computacionais e noções de sequência e algoritmo.",
         eixos: ["Mundo Digital", "Cultura Digital", "Pensamento Computacional"],
         planejamento: {
           objetivo:
-            "Desenvolver nos estudantes competências relacionadas ao uso consciente da tecnologia, compreensão do funcionamento básico dos dispositivos digitais e desenvolvimento do pensamento computacional por meio de atividades lúdicas, interativas e contextualizadas.",
+            "Desenvolver nos estudantes competências relacionadas à compreensão da informação, representação por diferentes linguagens, uso seguro de artefatos computacionais e criação de sequências simples de passos em atividades lúdicas e contextualizadas.",
           eixos: [
             {
               titulo: "Mundo Digital",
               icone: "monitor",
               objetivo:
-                "Compreender o uso dos dispositivos digitais e reconhecer sua presença no cotidiano.",
+                "Reconhecer o que é informação e compreender que ela pode ser armazenada, transmitida e representada por diferentes codificações.",
               conteudos: [
-                "O computador no dia a dia",
-                "Ligando e desligando o computador",
-                "Partes do computador",
-                "Periféricos de entrada e saída",
-                "Memória e armazenamento",
-                "Hardware e software",
+                {
+                  nome: "O que é informação",
+                  codigo: "EF01CO04",
+                  habilidade:
+                    "Reconhecer o que é a informação, que ela pode ser armazenada, transmitida como mensagem por diversos meios e descrita em várias linguagens.",
+                },
+                {
+                  nome: "Formas de representar informação: desenho, som, fala, símbolos e imagens",
+                  codigo: "EF01CO04",
+                  habilidade:
+                    "Reconhecer o que é a informação, que ela pode ser armazenada, transmitida como mensagem por diversos meios e descrita em várias linguagens.",
+                },
+                {
+                  nome: "Codificação simples: cores, símbolos, códigos e pixel art inicial",
+                  codigo: "EF01CO05",
+                  habilidade: "Representar informação usando diferentes codificações.",
+                },
               ],
             },
             {
               titulo: "Cultura Digital",
               icone: "globe",
               objetivo:
-                "Reconhecer o papel da tecnologia na comunicação, na aprendizagem e no cotidiano.",
+                "Reconhecer artefatos computacionais no cotidiano e conhecer possibilidades de uso seguro das tecnologias.",
               conteudos: [
-                "A informática e sua importância",
-                "Meios de comunicação",
-                "Google e serviços digitais",
-                "Profissões da tecnologia",
-                "Segurança e cuidados básicos",
+                {
+                  nome: "O computador e outros artefatos computacionais no dia a dia",
+                  codigo: "EF01CO06",
+                  habilidade:
+                    "Reconhecer e explorar artefatos computacionais voltados a atender necessidades pessoais ou coletivas.",
+                },
+                {
+                  nome: "Uso do computador, tablet, celular e outros dispositivos em situações de aprendizagem",
+                  codigo: "EF01CO06",
+                  habilidade:
+                    "Reconhecer e explorar artefatos computacionais voltados a atender necessidades pessoais ou coletivas.",
+                },
+                {
+                  nome: "Segurança e cuidados básicos no uso das tecnologias",
+                  codigo: "EF01CO07",
+                  habilidade:
+                    "Conhecer as possibilidades de uso seguro das tecnologias computacionais para proteção dos dados pessoais e para garantir a própria segurança.",
+                },
+                {
+                  nome: "Dados pessoais: nome, endereço, escola, fotos e informações da família",
+                  codigo: "EF01CO07",
+                  habilidade:
+                    "Conhecer as possibilidades de uso seguro das tecnologias computacionais para proteção dos dados pessoais e para garantir a própria segurança.",
+                },
               ],
             },
             {
               titulo: "Pensamento Computacional",
               icone: "brain",
               objetivo:
-                "Desenvolver noções iniciais de sequência, lógica e resolução de problemas de forma lúdica.",
+                "Desenvolver noções iniciais de organização, padrões, sequência de passos e algoritmos.",
               conteudos: [
-                "Sequência e ordem",
-                "Algoritmos simples",
-                "Padrões",
-                "Lógica e resolução de problemas",
-                "Introdução à robótica",
+                {
+                  nome: "Organização e classificação de objetos físicos ou digitais",
+                  codigo: "EF01CO01",
+                  habilidade:
+                    "Organizar objetos físicos ou digitais considerando diferentes características para esta organização, explicitando semelhanças (padrões) e diferenças.",
+                },
+                {
+                  nome: "Padrões, semelhanças e diferenças",
+                  codigo: "EF01CO01",
+                  habilidade:
+                    "Organizar objetos físicos ou digitais considerando diferentes características para esta organização, explicitando semelhanças (padrões) e diferenças.",
+                },
+                {
+                  nome: "Sequência de passos em situações do cotidiano",
+                  codigo: "EF01CO02",
+                  habilidade:
+                    "Identificar e seguir sequências de passos aplicados no dia a dia para resolver problemas.",
+                },
+                {
+                  nome: "Algoritmos simples com imagens, comandos orais ou cartões",
+                  codigo: "EF01CO03",
+                  habilidade:
+                    "Reorganizar e criar sequências de passos em meios físicos ou digitais, relacionando essas sequências à palavra ‘Algoritmos’.",
+                },
               ],
             },
           ],
@@ -62,52 +111,90 @@ export default function CurriculoComputacao() {
       },
       {
         ano: "2º Ano",
-        foco: "Lógica básica e usos da tecnologia",
+        foco: "Modelos, repetições, instruções de máquina e segurança",
         resumo:
-          "Sequência, padrões, uso de ferramentas digitais simples, redes e comunicação de forma orientada.",
+          "Criação de modelos, algoritmos com repetições simples, diferenças entre hardware e software e cuidados no uso de dispositivos.",
         eixos: ["Mundo Digital", "Cultura Digital", "Pensamento Computacional"],
         planejamento: {
           objetivo:
-            "Desenvolver nos estudantes competências relacionadas ao uso consciente da tecnologia, compreensão do funcionamento dos dispositivos digitais e desenvolvimento do pensamento computacional por meio de atividades lúdicas, práticas e contextualizadas.",
+            "Desenvolver a compreensão inicial de modelos, repetições, instruções de máquina, hardware, software e uso seguro das tecnologias em situações do cotidiano.",
           eixos: [
             {
               titulo: "Mundo Digital",
               icone: "monitor",
               objetivo:
-                "Compreender o funcionamento básico dos dispositivos digitais e reconhecer sua presença no cotidiano.",
+                "Compreender que máquinas executam instruções e diferenciar componentes físicos de programas.",
               conteudos: [
-                "Invenções e evolução do computador",
-                "Hardware e software",
-                "Partes internas do computador",
-                "Experiência com periféricos",
-                "Sistema operacional",
-                "Smartphones e dispositivos móveis",
+                {
+                  nome: "Máquinas, comandos e conjuntos de instruções",
+                  codigo: "EF02CO03",
+                  habilidade:
+                    "Identificar que máquinas diferentes executam conjuntos próprios de instruções e que podem ser usadas para definir algoritmos.",
+                },
+                {
+                  nome: "Hardware e software",
+                  codigo: "EF02CO04",
+                  habilidade:
+                    "Diferenciar componentes físicos (hardware) e programas que fornecem as instruções (software) para o hardware.",
+                },
+                {
+                  nome: "Partes físicas do computador e programas usados em aula",
+                  codigo: "EF02CO04",
+                  habilidade:
+                    "Diferenciar componentes físicos (hardware) e programas que fornecem as instruções (software) para o hardware.",
+                },
               ],
             },
             {
               titulo: "Cultura Digital",
               icone: "globe",
               objetivo:
-                "Reconhecer o papel das tecnologias digitais na comunicação, aprendizagem e sociedade.",
+                "Reconhecer características, usos e cuidados relacionados às tecnologias computacionais dentro e fora da escola.",
               conteudos: [
-                "Redes sociais educacionais",
-                "Google Docs e ferramentas online",
-                "Profissões da tecnologia",
-                "Games educacionais",
-                "Uso responsável da tecnologia",
+                {
+                  nome: "Tecnologias computacionais no cotidiano escolar e familiar",
+                  codigo: "EF02CO05",
+                  habilidade:
+                    "Reconhecer as características e usos das tecnologias computacionais no cotidiano dentro e fora da escola.",
+                },
+                {
+                  nome: "Ferramentas digitais simples para aprendizagem",
+                  codigo: "EF02CO05",
+                  habilidade:
+                    "Reconhecer as características e usos das tecnologias computacionais no cotidiano dentro e fora da escola.",
+                },
+                {
+                  nome: "Cuidados com dispositivos computacionais",
+                  codigo: "EF02CO06",
+                  habilidade:
+                    "Reconhecer os cuidados com a segurança no uso de dispositivos computacionais.",
+                },
               ],
             },
             {
               titulo: "Pensamento Computacional",
               icone: "brain",
               objetivo:
-                "Desenvolver o pensamento computacional por meio de atividades envolvendo sequência, padrões, lógica e criação de instruções simples.",
+                "Criar representações de objetos e simular algoritmos com sequências e repetições simples.",
               conteudos: [
-                "Sequência de ações",
-                "Padrões e repetições",
-                "Lógica e resolução de problemas",
-                "Instruções simples",
-                "Introdução à robótica",
+                {
+                  nome: "Modelagem de objetos: características e atributos essenciais",
+                  codigo: "EF02CO01",
+                  habilidade:
+                    "Criar e comparar modelos (representações) de objetos, identificando padrões e atributos essenciais.",
+                },
+                {
+                  nome: "Padrões em objetos e representações",
+                  codigo: "EF02CO01",
+                  habilidade:
+                    "Criar e comparar modelos (representações) de objetos, identificando padrões e atributos essenciais.",
+                },
+                {
+                  nome: "Algoritmos com repetições simples",
+                  codigo: "EF02CO02",
+                  habilidade:
+                    "Criar e simular algoritmos representados em linguagem oral, escrita ou pictográfica, construídos como sequências com repetições simples (iterações definidas) com base em instruções preestabelecidas ou criadas, analisando como a precisão da instrução impacta na execução do algoritmo.",
+                },
               ],
             },
           ],
@@ -115,53 +202,89 @@ export default function CurriculoComputacao() {
       },
       {
         ano: "3º Ano",
-        foco: "Organização digital e produção de conteúdo",
+        foco: "Dados, informação, interfaces e decomposição",
         resumo:
-          "Arquivos e pastas, editores de texto, planilhas, apresentações e lógica aplicada em atividades práticas.",
+          "Relação entre dado e informação, formatos de dados, entrada e saída, pesquisa, produção digital, lógica e decomposição.",
         eixos: ["Mundo Digital", "Cultura Digital", "Pensamento Computacional"],
         planejamento: {
           objetivo:
-            "Desenvolver nos estudantes competências relacionadas ao uso consciente da tecnologia, compreensão do funcionamento dos sistemas computacionais e desenvolvimento do pensamento computacional por meio de atividades práticas, lúdicas e contextualizadas.",
+            "Desenvolver a compreensão sobre dados, informação, interfaces físicas, pesquisa, produção digital, lógica, algoritmos condicionais e decomposição.",
           eixos: [
             {
               titulo: "Mundo Digital",
               icone: "monitor",
               objetivo:
-                "Compreender o funcionamento dos sistemas computacionais, seus componentes e a organização das informações digitais.",
+                "Relacionar dado e informação, compreender formatos específicos de dados e reconhecer interfaces físicas de entrada e saída.",
               conteudos: [
-                "Sociedade e tecnologia",
-                "Entrada, processamento e saída",
-                "Hardware e software",
-                "Partes do computador",
-                "Arquivos e pastas",
-                "Sistema operacional",
+                {
+                  nome: "Dado e informação",
+                  codigo: "EF03CO04",
+                  habilidade: "Relacionar o conceito de informação com o de dado.",
+                },
+                {
+                  nome: "Formatos de dados: texto, imagem, número, áudio e data",
+                  codigo: "EF03CO05",
+                  habilidade:
+                    "Compreender que dados são estruturados em formatos específicos dependendo da informação armazenada.",
+                },
+                {
+                  nome: "Dispositivos de entrada e saída: teclado, mouse, monitor, microfone, caixa de som e impressora",
+                  codigo: "EF03CO06",
+                  habilidade:
+                    "Reconhecer que, para um computador realizar tarefas, ele se comunica com o mundo exterior com o uso de interfaces físicas (dispositivos de entrada e saída).",
+                },
               ],
             },
             {
               titulo: "Cultura Digital",
               icone: "globe",
               objetivo:
-                "Compreender o uso das tecnologias digitais na comunicação, produção de conteúdo e na sociedade.",
+                "Utilizar ferramentas de busca, produzir em diferentes formatos digitais e reconhecer impactos do compartilhamento de informações pessoais.",
               conteudos: [
-                "Editores de texto",
-                "Planilhas",
-                "Apresentações",
-                "Internet",
-                "Redes sociais educacionais",
-                "Inteligência Artificial",
+                {
+                  nome: "Navegadores e ferramentas de busca",
+                  codigo: "EF03CO07",
+                  habilidade:
+                    "Utilizar diferentes navegadores e ferramentas de busca para pesquisar e acessar informações.",
+                },
+                {
+                  nome: "Produção digital com editor de texto, desenho, apresentação ou ferramenta educacional",
+                  codigo: "EF03CO08",
+                  habilidade:
+                    "Usar ferramentas computacionais em situações didáticas para se expressar em diferentes formatos digitais.",
+                },
+                {
+                  nome: "Compartilhamento de informações pessoais em meio digital",
+                  codigo: "EF03CO09",
+                  habilidade:
+                    "Reconhecer o potencial impacto do compartilhamento de informações pessoais ou de seus pares em meio digital.",
+                },
               ],
             },
             {
               titulo: "Pensamento Computacional",
               icone: "brain",
               objetivo:
-                "Desenvolver o pensamento computacional por meio de atividades envolvendo sequência, padrões, lógica e criação de instruções simples.",
+                "Trabalhar lógica, algoritmos com repetições condicionais simples e decomposição de problemas.",
               conteudos: [
-                "Sequência e organização de tarefas",
-                "Padrões e regularidades",
-                "Lógica e resolução de problemas",
-                "Algoritmos simples",
-                "Introdução à robótica",
+                {
+                  nome: "Sentenças lógicas: verdadeiro, falso e negação",
+                  codigo: "EF03CO01",
+                  habilidade:
+                    "Associar os valores 'verdadeiro' e 'falso' a sentenças lógicas que dizem respeito a situações do dia a dia, fazendo uso de termos que indicam negação.",
+                },
+                {
+                  nome: "Algoritmos com sequências e repetições condicionais simples",
+                  codigo: "EF03CO02",
+                  habilidade:
+                    "Criar e simular algoritmos representados em linguagem oral, escrita ou pictográfica, que incluam sequências e repetições simples com condição (iterações indefinidas), para resolver problemas de forma independente e em colaboração.",
+                },
+                {
+                  nome: "Decomposição de problemas em partes menores",
+                  codigo: "EF03CO03",
+                  habilidade:
+                    "Aplicar a estratégia de decomposição para resolver problemas complexos, dividindo esse problema em partes menores, resolvendo-as e combinando suas soluções.",
+                },
               ],
             },
           ],
@@ -169,54 +292,90 @@ export default function CurriculoComputacao() {
       },
       {
         ano: "4º Ano",
-        foco: "Representação digital e algoritmos",
+        foco: "Matrizes, registros, codificação digital e ética",
         resumo:
-          "Organização da informação, segurança digital, representação por pixels e códigos, além de robótica introdutória.",
+          "Representação por matrizes e registros, algoritmos com repetições, codificação digital, produção de conteúdo, ética e confiabilidade das fontes.",
         eixos: ["Mundo Digital", "Cultura Digital", "Pensamento Computacional"],
         planejamento: {
           objetivo:
-            "Desenvolver nos estudantes competências relacionadas ao uso consciente da tecnologia, compreensão do funcionamento dos sistemas computacionais e desenvolvimento do pensamento computacional por meio de atividades práticas, lúdicas e contextualizadas.",
+            "Desenvolver a compreensão de estruturas de representação, algoritmos com repetições, codificação digital, produção de conteúdo e uso ético de dados e fontes.",
           eixos: [
             {
               titulo: "Mundo Digital",
               icone: "monitor",
               objetivo:
-                "Compreender a evolução dos computadores, o funcionamento dos dispositivos digitais e a organização das informações em ambientes computacionais.",
+                "Entender a necessidade de codificar dados para armazenamento, manipulação e transmissão em formato digital.",
               conteudos: [
-                "História e evolução dos computadores",
-                "Tipos de hardware e periféricos",
-                "Impressoras e formas de impressão",
-                "Software, dados e armazenamento",
-                "Sistema operacional e organização de arquivos",
-                "Smartphone como ferramenta de aprendizagem",
+                {
+                  nome: "Codificação digital: por que o computador precisa de códigos",
+                  codigo: "EF04CO04",
+                  habilidade:
+                    "Entender que para guardar, manipular e transmitir dados deve-se codificá-los de alguma forma que seja compreendida pela máquina (formato digital).",
+                },
+                {
+                  nome: "Binário, ASCII e atributos de pixel como RGB",
+                  codigo: "EF04CO05",
+                  habilidade:
+                    "Codificar diferentes informações para representação em computador (binária, ASCII, atributos de pixel, como RGB etc.).",
+                },
+                {
+                  nome: "Representação digital de textos, imagens e cores",
+                  codigo: "EF04CO05",
+                  habilidade:
+                    "Codificar diferentes informações para representação em computador (binária, ASCII, atributos de pixel, como RGB etc.).",
+                },
               ],
             },
             {
               titulo: "Cultura Digital",
               icone: "globe",
               objetivo:
-                "Utilizar tecnologias digitais de forma crítica, segura e criativa na comunicação, pesquisa, produção de conteúdo e aprendizagem.",
+                "Usar ferramentas computacionais para criação de conteúdo, demonstrando postura ética e verificando a confiabilidade das fontes.",
               conteudos: [
-                "Word e Google Documentos",
-                "Excel e Google Planilhas",
-                "PowerPoint e Google Apresentações",
-                "Internet e pesquisa online",
-                "Segurança digital",
-                "Comunicação digital",
+                {
+                  nome: "Criação de conteúdo: textos, apresentações, imagens e vídeos",
+                  codigo: "EF04CO06",
+                  habilidade:
+                    "Usar diferentes ferramentas computacionais para criação de conteúdo (textos, apresentações, vídeos etc.).",
+                },
+                {
+                  nome: "Ética na coleta, guarda, transferência e uso de dados",
+                  codigo: "EF04CO07",
+                  habilidade:
+                    "Demonstrar postura ética nas atividades de coleta, transferência, guarda e uso de dados.",
+                },
+                {
+                  nome: "Confiabilidade das fontes e pesquisa online",
+                  codigo: "EF04CO08",
+                  habilidade:
+                    "Reconhecer a importância de verificar a confiabilidade das fontes de informações obtidas na Internet.",
+                },
               ],
             },
             {
               titulo: "Pensamento Computacional",
               icone: "brain",
               objetivo:
-                "Desenvolver o pensamento computacional por meio de atividades envolvendo sequência, padrões, lógica, algoritmos e representação da informação digital.",
+                "Reconhecer representações por matrizes e registros e criar algoritmos com repetições simples e aninhadas.",
               conteudos: [
-                "Sequência lógica e organização de etapas",
-                "Padrões e regularidades",
-                "Lógica e resolução de problemas",
-                "Algoritmos simples e comandos",
-                "Representação digital",
-                "Robótica educacional",
+                {
+                  nome: "Matrizes: tabelas, grades, coordenadas, mapas e pixel art",
+                  codigo: "EF04CO01",
+                  habilidade:
+                    "Reconhecer objetos do mundo real e/ou digital que podem ser representados através de matrizes que estabelecem uma organização na qual cada componente está em uma posição definida por coordenadas, fazendo manipulações simples sobre estas representações.",
+                },
+                {
+                  nome: "Registros: fichas, cadastros, carteiras, boletins e formulários",
+                  codigo: "EF04CO02",
+                  habilidade:
+                    "Reconhecer objetos do mundo real e/ou digital que podem ser representados através de registros que estabelecem uma organização na qual cada componente é identificado por um nome, fazendo manipulações sobre estas representações.",
+                },
+                {
+                  nome: "Algoritmos com repetições simples e aninhadas",
+                  codigo: "EF04CO03",
+                  habilidade:
+                    "Criar e simular algoritmos representados em linguagem oral, escrita ou pictográfica, que incluam sequências e repetições simples e aninhadas (iterações definidas e indefinidas), para resolver problemas de forma independente e em colaboração.",
+                },
               ],
             },
           ],
@@ -224,52 +383,102 @@ export default function CurriculoComputacao() {
       },
       {
         ano: "5º Ano",
-        foco: "Autonomia digital e aplicação prática",
+        foco: "Listas, grafos, arquitetura, sistema operacional e cidadania digital",
         resumo:
-          "Produção de documentos, pesquisa eficiente, cidadania digital, backup, segurança e pensamento computacional funcional.",
+          "Listas, grafos, lógica, algoritmos com seleção, componentes do computador, armazenamento, sistema operacional, direitos autorais e análise crítica.",
         eixos: ["Mundo Digital", "Cultura Digital", "Pensamento Computacional"],
         planejamento: {
           objetivo:
-            "Desenvolver nos estudantes competências relacionadas ao uso consciente da tecnologia, compreensão dos sistemas digitais e aplicação do pensamento computacional em atividades práticas, contextualizadas e significativas.",
+            "Desenvolver autonomia na compreensão dos sistemas digitais, organização de informações, análise crítica de conteúdos e criação de soluções computacionais simples.",
           eixos: [
             {
               titulo: "Mundo Digital",
               icone: "monitor",
               objetivo:
-                "Compreender o funcionamento dos sistemas digitais, os diferentes dispositivos tecnológicos e sua aplicação no cotidiano.",
+                "Identificar componentes principais de um computador, formas de armazenamento e papel do sistema operacional.",
               conteudos: [
-                "Importância da tecnologia na sociedade",
-                "Novos computadores e dispositivos inteligentes",
-                "Sistemas operacionais",
-                "Organização e backup de dados",
-                "Segurança digital",
+                {
+                  nome: "Componentes principais do computador: entrada, saída, processador e armazenamento",
+                  codigo: "EF05CO05",
+                  habilidade:
+                    "Identificar os componentes principais de um computador (dispositivos de entrada/saída, processadores e armazenamento).",
+                },
+                {
+                  nome: "Armazenamento local, removível e remoto/nuvem",
+                  codigo: "EF05CO06",
+                  habilidade:
+                    "Reconhecer que os dados podem ser armazenados em um dispositivo local ou remoto.",
+                },
+                {
+                  nome: "Sistema operacional e gerenciamento do hardware e dos programas",
+                  codigo: "EF05CO07",
+                  habilidade:
+                    "Reconhecer a necessidade de um sistema operacional para a execução de programas e gerenciamento do hardware.",
+                },
               ],
             },
             {
               titulo: "Cultura Digital",
               icone: "globe",
               objetivo:
-                "Utilizar tecnologias digitais para produção, comunicação e aprendizagem de forma crítica, ética e responsável.",
+                "Acessar informações de forma crítica, respeitar direitos autorais, refletir sobre tecnologia e escolher ferramentas adequadas.",
               conteudos: [
-                "Word e Google Docs",
-                "Excel e Google Planilhas",
-                "PowerPoint e Google Apresentações",
-                "Internet e pesquisa eficiente",
-                "Redes sociais e uso responsável",
-                "Profissões da era digital",
+                {
+                  nome: "Informações confiáveis e não confiáveis na Internet",
+                  codigo: "EF05CO08",
+                  habilidade:
+                    "Acessar as informações na Internet de forma crítica para distinguir os conteúdos confiáveis de não confiáveis.",
+                },
+                {
+                  nome: "Direitos autorais no uso de textos, imagens, vídeos e músicas",
+                  codigo: "EF05CO09",
+                  habilidade:
+                    "Usar informações considerando aplicações e limites dos direitos autorais em diferentes mídias digitais.",
+                },
+                {
+                  nome: "Tecnologia, sociedade e mundo do trabalho",
+                  codigo: "EF05CO10",
+                  habilidade:
+                    "Expressar-se crítica e criativamente na compreensão das mudanças tecnológicas no mundo do trabalho e sobre a evolução da sociedade.",
+                },
+                {
+                  nome: "Escolha da tecnologia adequada para resolver problemas",
+                  codigo: "EF05CO11",
+                  habilidade:
+                    "Identificar a adequação de diferentes tecnologias computacionais na resolução de problemas.",
+                },
               ],
             },
             {
               titulo: "Pensamento Computacional",
               icone: "brain",
               objetivo:
-                "Desenvolver o pensamento computacional por meio de atividades envolvendo sequência, lógica e resolução de problemas do cotidiano.",
+                "Representar informações com listas e grafos, realizar operações lógicas e criar algoritmos com seleção condicional.",
               conteudos: [
-                "Sequência e organização de tarefas",
-                "Lógica e resolução de problemas",
-                "Instruções e algoritmos simples",
-                "Interpretação de comandos",
-                "Robótica conceitual",
+                {
+                  nome: "Listas: filas, listas de tarefas, pilhas e sequências organizadas",
+                  codigo: "EF05CO01",
+                  habilidade:
+                    "Reconhecer objetos do mundo real e/ou digital que podem ser representados através de listas que estabelecem uma organização na qual há um número variável de itens dispostos em sequência, fazendo manipulações simples sobre estas representações.",
+                },
+                {
+                  nome: "Grafos: mapas, caminhos, redes, relações e conexões",
+                  codigo: "EF05CO02",
+                  habilidade:
+                    "Reconhecer objetos do mundo real e digital que podem ser representados através de grafos que estabelecem uma organização com uma quantidade variável de vértices conectados por arestas, fazendo manipulações simples sobre estas representações.",
+                },
+                {
+                  nome: "Lógica computacional: negação, conjunção e disjunção",
+                  codigo: "EF05CO03",
+                  habilidade:
+                    "Realizar operações de negação, conjunção e disjunção sobre sentenças lógicas e valores 'verdadeiro' e 'falso'.",
+                },
+                {
+                  nome: "Algoritmos com sequências, repetições e seleções condicionais",
+                  codigo: "EF05CO04",
+                  habilidade:
+                    "Criar e simular algoritmos representados em linguagem oral, escrita ou pictográfica, que incluam sequências, repetições e seleções condicionais para resolver problemas de forma independente e em colaboração.",
+                },
               ],
             },
           ],
@@ -280,9 +489,9 @@ export default function CurriculoComputacao() {
   );
 
   const iconMap = {
-    monitor: <Monitor className="h-5 w-5" />,
-    globe: <Globe className="h-5 w-5" />,
-    brain: <BrainCircuit className="h-5 w-5" />,
+    monitor: "💻",
+    globe: "🌐",
+    brain: "🧠",
   };
 
   return (
@@ -296,9 +505,8 @@ export default function CurriculoComputacao() {
             Fundamental I
           </h1>
           <p className="mt-4 max-w-3xl text-lg text-blue-50">
-            Uma proposta de currículo de Computação para o Ensino Fundamental I,
-            organizada por séries, alinhada aos eixos da BNCC de Computação e
-            pensada para a realidade da escola pública.
+            Proposta de currículo de Computação para o Ensino Fundamental I,
+            organizada por séries, eixos, conteúdos e habilidades oficiais da BNCC de Computação.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <span className="rounded-full bg-white/15 px-4 py-2 text-sm">1º ao 5º ano</span>
@@ -329,7 +537,7 @@ export default function CurriculoComputacao() {
           <div className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-200">
             <h2 className="text-xl font-semibold">Estrutura</h2>
             <p className="mt-3 text-sm leading-6 text-slate-600">
-              Cada série apresenta objetivo geral e os conteúdos organizados pelos três eixos.
+              Cada série apresenta objetivo geral, eixos, conteúdos, códigos e habilidades.
             </p>
           </div>
         </section>
@@ -382,10 +590,10 @@ export default function CurriculoComputacao() {
           <h2 className="text-2xl font-bold">Expansões possíveis para o site</h2>
           <div className="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
             {[
-              "Habilidades BNCC por ano",
               "Conteúdos por trimestre",
               "Atividades práticas e imprimíveis",
               "Área para baixar documentos em Word e PDF",
+              "Filtro por código BNCC",
             ].map((item) => (
               <div key={item} className="rounded-2xl bg-slate-50 p-4 text-sm text-slate-700 ring-1 ring-slate-200">
                 {item}
@@ -413,7 +621,7 @@ export default function CurriculoComputacao() {
               <div className="flex items-start justify-between border-b border-slate-200 px-6 py-5">
                 <div>
                   <div className="inline-flex items-center gap-2 rounded-full bg-blue-50 px-3 py-1 text-xs font-medium text-blue-700">
-                    <BookOpen className="h-4 w-4" />
+                    <span aria-hidden="true">📘</span>
                     Planejamento completo
                   </div>
                   <h3 className="mt-3 text-2xl font-bold text-slate-900">{selectedSerie.ano}</h3>
@@ -426,7 +634,7 @@ export default function CurriculoComputacao() {
                   className="rounded-2xl p-2 text-slate-500 transition hover:bg-slate-100 hover:text-slate-800"
                   aria-label="Fechar modal"
                 >
-                  <X className="h-5 w-5" />
+                  <span className="text-lg leading-none">×</span>
                 </button>
               </div>
 
@@ -439,7 +647,7 @@ export default function CurriculoComputacao() {
                     >
                       <div className="flex items-center gap-3">
                         <div className="rounded-2xl bg-white p-3 text-cyan-700 shadow-sm ring-1 ring-slate-200">
-                          {iconMap[eixo.icone]}
+                          <span className="text-xl" aria-hidden="true">{iconMap[eixo.icone]}</span>
                         </div>
                         <div>
                           <h4 className="text-xl font-semibold text-slate-900">{eixo.titulo}</h4>
@@ -450,10 +658,18 @@ export default function CurriculoComputacao() {
                       <div className="mt-5 grid gap-3 md:grid-cols-2">
                         {eixo.conteudos.map((conteudo) => (
                           <div
-                            key={conteudo}
-                            className="rounded-2xl bg-white px-4 py-3 text-sm text-slate-700 shadow-sm ring-1 ring-slate-200"
+                            key={`${conteudo.codigo}-${conteudo.nome}`}
+                            className="rounded-2xl bg-white p-4 text-sm text-slate-700 shadow-sm ring-1 ring-slate-200"
                           >
-                            {conteudo}
+                            <div className="flex flex-wrap items-center gap-2">
+                              <span className="rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-700">
+                                {conteudo.codigo}
+                              </span>
+                              <span className="font-semibold text-slate-900">{conteudo.nome}</span>
+                            </div>
+                            <p className="mt-3 text-xs leading-5 text-slate-600">
+                              {conteudo.habilidade}
+                            </p>
                           </div>
                         ))}
                       </div>
